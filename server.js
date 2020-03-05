@@ -2,7 +2,9 @@ var logger = require ("morgan"),
 cors = require ("cors"),
 http = require ("http"),
 express = require ("express"),
-bodyParser = require ("body-parser");
+bodyParser = require ("body-parser"),
+mongoose = require( 'mongoose');
+
 
 var app = express();
 var port = 3000;
