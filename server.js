@@ -8,10 +8,14 @@ mongoose = require( 'mongoose');
 
 var app = express();
 var port = 3000;
+var userCtrl = require('./user-controller');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(require('./routes'));
+app.get('/users', userCtrl.createUser);
+
+
 
 app.listen(port,function(err){
     console.log("listening on Port: " + port)
