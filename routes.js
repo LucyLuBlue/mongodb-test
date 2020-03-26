@@ -5,10 +5,6 @@ itemCtrl = require('./item-controller');
 router.get('/hello/:foo/:bar', itemCtrl.getWorld);
 
 
-router.post('/hello', function(req,res){
-res.json ({resullt: "The POST request was sent",data:req.body});
-});
-
-
+router.post('/hello', itemCtrl.postWorld);
 
 module.exports = router;

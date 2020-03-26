@@ -1,5 +1,5 @@
 exports.getWorld = function(req,res){
-    res.json ({resullt: "Hello world form controller 😤😱🥵🤡", data: [
+    res.json ({resullt: "Hello world from controller 😤😱🥵🤡", data: [
     req.params.foo,
     req.params.bar
 ]});
