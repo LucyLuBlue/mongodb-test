@@ -13,9 +13,12 @@ var userCtrl = require('./user-controller');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(require('./routes'));
-app.post('/users', userCtrl.createUser);
+
+app.get('/users', userCtrl.createUser);
+
 app.get('/users', userCtrl.getUsers);
 app.get('/users/:id', userCtrl.getUser);
+app.post('/users', userCtrl.createUser);
 app.delete('/users/:id', userCtrl.deleteUser);
 app.put('/users/:id', userCtrl.updateUser);
 
