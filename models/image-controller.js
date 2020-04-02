@@ -3,6 +3,7 @@ var Image = require('./models/image');
 var path = require('path'),
 fs = require('fs'),
 del = require('del');
+
 //Adding an image
 exports.uploadImage = function(req, res) {
     let newImage = new Image();
@@ -16,6 +17,7 @@ exports.uploadImage = function(req, res) {
         res.status(201).send({ newImage })
     });
 };
+
 //Get all images
 exports.getImages = function(req, res) {
     Image.find({}, '-__v')
