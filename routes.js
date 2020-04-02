@@ -1,6 +1,6 @@
 var express = require('express'),
 router = express.Router();
-itemCtrl = require('./item-controller'),
+//itemCtrl = require('./item-controller'),
 userCtrl = require('./user-controller');
 
 
